@@ -1,0 +1,112 @@
+{
+  "root": true,
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "globals": {
+    "describe": true,
+    "it": true,
+    "expect": true,
+    "beforeAll": true,
+    "beforeEach": true,
+    "jest": true
+  },
+  "extends": [],
+  "rules": {
+    "indent": [
+      0,
+      2
+    ],
+    "no-debugger": 0,
+    "semi": [
+      2,
+      "always"
+    ],
+    "no-extra-semi": 2,
+    "comma-style": [
+      2,
+      "last"
+    ],
+    "comma-spacing": [
+      2,
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "quotes": [
+      2,
+      "single"
+    ],
+    "padded-blocks": "off",
+    "no-multi-spaces": 0,
+    "no-nested-ternary": 0,
+    "new-cap": 0,
+    "no-undef": 1,
+    "vars-on-top": 0,
+    "no-unused-vars": [
+      1,
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "no-use-before-define": 0,
+    "comma-dangle": "off",
+    "image-uses-alt": 0,
+    "redundant-alt": 0,
+    "valid-aria-role": 0,
+    "import/prefer-default-export": 0,
+    "no-console": 0,
+    "no-bitwise": 0,
+    "no-mixed-operators": 0,
+    "no-param-reassign": 0,
+    "no-underscore-dangle": 0,
+    "no-unmodified-loop-condition": 0,
+    "space-before-function-paren": [
+      2,
+      {
+        "anonymous": "always",
+        "named": "always",
+        "asyncArrow": "always"
+      }
+    ],
+    "no-await-in-loop": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ]
+  },
+  "parserOptions": {
+    "ecmaVersion": 2019
+  },
+  "overrides": [
+    {
+      "files": [
+        "*/**/*.ts"
+      ],
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+      ],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "semi": "off",
+        "@typescript-eslint/semi": [
+          "error",
+          "always"
+        ],
+        "import/first": "off",
+        "@typescript-eslint/camelcase": "off"
+      },
+      "parser": "@typescript-eslint/parser"
+    }
+  ]
+}

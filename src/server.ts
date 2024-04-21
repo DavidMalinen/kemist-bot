@@ -1,6 +1,10 @@
-const express = require('express');
+require('dotenv').config();
+import express from 'express';
+import bodyParser from 'body-parser';
+const port = process.env.PORT;
 const app = express();
-const port = 3000;
+
+app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
     res.send('Hello World!');

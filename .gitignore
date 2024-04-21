@@ -1,2 +1,8 @@
-node_modules
+node_modules/
+build/
+
 .DS_Store
+.env
+
+base_tsconfig.json
+kemist-bot.code-workspace
