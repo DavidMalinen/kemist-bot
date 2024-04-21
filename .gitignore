@@ -1,5 +1,5 @@
 node_modules/
-build/
+built/
 
 .DS_Store
 .env

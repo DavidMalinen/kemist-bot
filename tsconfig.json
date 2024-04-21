@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "ES2019",
     "module": "commonjs",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
@@ -18,22 +18,19 @@
     "noImplicitThis": false,
     "strictNullChecks": false,
     "esModuleInterop": true,
-    "outDir": "./build",
+    "outDir": "./built",
     "baseUrl": ".",
     "skipLibCheck": true,
     "paths": {
+      "@packageJson": ["package.json"],
       "@server/*": ["src/*"],
-      "@package": ["package.json"],
-      "@types/*": ["src/types/*"],
+      "@ctypes/*": ["src/types/*"],
       "@services/*": ["src/services/*"],
       "@models/*": ["src/models/*"],
       "@middlewares/*": ["src/middlewares/*"],
-      "@controllers/*": ["src/controllers/*"],
       "@utils/*": ["src/utils/*"],
       "@interfaces/*": ["src/interfaces/*"],
-      "@errors/*": ["src/errors/*"],
       "@constants/*": ["src/constants/*"],
-      "@router": ["src/router/*"]
     },
     "resolveJsonModule" : true
   },

@@ -1,39 +1,57 @@
 {
-    "name": "kemist-bot",
-    "version": "1.0.0",
-    "description": "",
-    "author": "David 'Morty' Malinen",
-    "engines": {
-        "node": "20.x.x"
-    },
-    "scripts": {
-        "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server.ts",
-        "clean": "rm -rf coverage build tmp node_modules",
-        "local-build": "tsc -p tsconfig.build.json",
-        "lint": "eslint --ext ts,js src/",
-        "lint:fix": "eslint --fix --ext ts,js src/"
-    },
-    "keywords": [],
-    "license": "ISC",
-    "dependencies": {
-        "@hapi/joi-date": "^2.0.1",
-        "@types/express": "^4.17.21",
-        "@types/hapi__joi": "^17.1.14",
-        "body-parser": "^1.20.2",
-        "dotenv": "^16.4.5",
-        "express": "^4.19.2",
-        "joi": "^17.12.3",
-        "lodash": "^4.17.21",
-        "module-alias": "^2.2.3",
-        "npm-check-updates": "^16.14.18",
-        "tsconfig-paths": "^4.2.0"
-    },
-    "devDependencies": {
-        "@eslint/js": "^9.1.1",
-        "eslint": "^8.57.0",
-        "nodemon": "^3.1.0",
-        "ts-node": "^10.9.2",
-        "typescript": "^5.4.5",
-        "typescript-eslint": "^7.7.0"
-    }
+  "name": "kemist-bot",
+  "version": "1.0.0",
+  "description": "",
+  "author": "David 'Morty' Malinen",
+  "engines": {
+    "node": "20.x.x"
+  },
+  "scripts": {
+    "dev": "ts-node-dev src/server.ts",
+    "prod": "npm run build && node ./built/src/server.js",
+    "debug": "npm run build && node --inspect ./built/src/server.js",
+    "clean": "rm -rf coverage build tmp node_modules",
+    "local-build": "tsc -p tsconfig.build.json",
+    "lint": "eslint --ext ts,js src/",
+    "lint:fix": "eslint --fix --ext ts,js src/"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi-date": "^2.0.1",
+    "@types/express": "^4.17.21",
+    "@types/hapi__joi": "^17.1.14",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "joi": "^17.12.3",
+    "lodash": "^4.17.21",
+    "module-alias": "^2.2.3",
+    "npm-check-updates": "^16.14.18",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "tslib": "^2.6.2",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.1.1",
+    "eslint": "^9.1.0",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.7.0"
+  },
+  "_moduleAliases": {
+    "@packageJson": "package.json",
+    "@server": "built/src",
+    "@ctypes": "built/src/types",
+    "@services": "built/src/services",
+    "@models": "built/src/models",
+    "@middlewares": "built/src/middlewares",
+    "@utils": "built/src/utils",
+    "@interfaces": "built/src/interfaces",
+    "@constants": "built/src/constants"
+  }
 }
